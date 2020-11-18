@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:13.0-alpine'
+    environment:
+      POSTGRES_PASSWORD: 'obscure-password'
+      POSTGRES_USER: 'obscure-user'
+      POSTGRES_DB: 'app'
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    ports:
+      - '5432:5432'
+
+  express:
+    labels:
+      shipyard.before: 'npx sequelize-cli db:migrate'
+      shipyard.route: '/'
+    build:
+      context: .
+    environment:
+      DB_USER: 'obscure-user'
+      DB_PASSWORD: 'obscure-password'
+      DB_NAME: 'app'
+      DB_HOST: 'postgres'
+      DB_PORT: '5432'
+    depends_on:
+      - 'postgres'
+    ports:
+      - '3000:3000'
+    volumes:
+      - './src:/app/src'
+
+volumes:
+  postgres:
