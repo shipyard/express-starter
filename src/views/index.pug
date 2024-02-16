@@ -1,9 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Use this document as a way to quickly start any new project.
-  p All you get is this text and a mostly barebones HTML document.
-  br
-  p Test Counter: #{counter}
+  header(class="bg-[#003c66]")
+    div(class="mx-auto max-w-screen-xl px-4 py-1 sm:px-6 sm:py-2 lg:px-6")
+      div(class="sm:flex sm:items-center sm:justify-between")
+        div(class="text-center sm:text-left")
+          img(class="h-9" src="/images/white-logo.png")
+
+  div(class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-2 lg:px-6 prose")
+    h1.text-6xl= title
+    p.text-3xl Welcome to #{title}
+    p.text-xl Use this document as a way to quickly start any new project.
+    p.text-xl All you get is this text and a mostly barebones HTML document.
+    br
+    p.text-xl Test Counter: #{counter}

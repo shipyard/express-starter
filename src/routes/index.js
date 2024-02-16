@@ -27,7 +27,7 @@ router.get('/', async function(req, res, next) {
     ? await incrementCounter(counters[0])
     : await createCounter();
 
-  res.render('index', { title: 'Express', counter: counter });
+  res.render('index', { title: 'Shipyard Express Starter', counter: counter });
 });
 
 module.exports = router;
