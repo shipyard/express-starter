@@ -6,17 +6,20 @@
     "start": "nodemon ./src/bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pg": "^8.4.2",
-    "pug": "2.0.0-beta11",
-    "sequelize": "^6.3.5"
+    "cookie-parser": "1.4.6",
+    "debug": "4.3.4",
+    "express": "4.18.2",
+    "http-errors": "2.0.0",
+    "morgan": "1.10.0",
+    "pg": "8.11.3",
+    "pug": "3.0.2",
+    "sequelize": "6.37.0"
+  },
+  "overrides": {
+    "semver": "^7.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6",
-    "sequelize-cli": "^6.2.0"
+    "nodemon": "3.0.3",
+    "sequelize-cli": "6.6.2"
   }
 }
