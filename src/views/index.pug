@@ -1,16 +1,13 @@
 extends layout
 
 block content
-  header(class="bg-[#003c66]")
-    div(class="mx-auto max-w-screen-xl px-4 py-1 sm:px-6 sm:py-2 lg:px-6")
-      div(class="sm:flex sm:items-center sm:justify-between")
-        div(class="text-center sm:text-left")
-          img(class="h-9" src="/images/white-logo.png")
-
-  div(class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-2 lg:px-6 prose")
-    h1.text-6xl= title
-    p.text-3xl Welcome to #{title}
-    p.text-xl Use this document as a way to quickly start any new project.
-    p.text-xl All you get is this text and a mostly barebones HTML document.
-    br
-    p.text-xl Test Counter: #{counter}
+  section(class="container mb-auto mx-auto place-content-center pt-40 pb-8")
+    div(class="container-fluid")
+      div(class="flex items-center justify-between")
+        div(class="flex flex-col items-start text-lg-left pr-lg-5 mb-48 prose text-white")
+          h1(class="text-6xl text-left relative m-0 p-0t text-white") Shipyard's Express Starter App 
+          p(class="text-3xl text-left pt-8 pb-8 m-0") Use this document as a way to quickly start any new project.
+          p(class="text-3xl text-left pt-8 pb-8 m-0") All you get is this text and a mostly bare bones HTML document.
+          p(class="text-3xl text-left pt-8 pb-8 m-0") Test Counter: #{counter}
+        div(class="lg:pl-5 pt-lg-0 lg:text-right text-center none hidden md:block")
+          img(src="https://sy-marketing.netlify.app/images/banner/shipyard-illustration-4.png")(style="max-width: 100%; height: auto; position: relative;" alt="Shipyard Ephemeral Environments")
