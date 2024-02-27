@@ -940,8 +940,14 @@ video {
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-bottom: 0;
 }
+.fixed {
+  position: fixed;
+}
 .relative {
   position: relative;
+}
+.bottom-0 {
+  bottom: 0px;
 }
 .m-0 {
   margin: 0px;
@@ -953,9 +959,6 @@ video {
 .mb-48 {
   margin-bottom: 12rem;
 }
-.mb-auto {
-  margin-bottom: auto;
-}
 .block {
   display: block;
 }
@@ -964,6 +967,9 @@ video {
 }
 .hidden {
   display: none;
+}
+.w-full {
+  width: 100%;
 }
 .flex-col {
   flex-direction: column;
@@ -991,11 +997,8 @@ video {
 .to-\[\#0775D7\] {
   --tw-gradient-to: #0775D7 var(--tw-gradient-to-position);
 }
-.pb-8 {
-  padding-bottom: 2rem;
-}
-.pt-40 {
-  padding-top: 10rem;
+.pt-20 {
+  padding-top: 5rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1018,12 +1021,24 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+@media (min-width: 640px) {
+
+  .sm\:fixed {
+    position: fixed;
+  }
+
+  .sm\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 @media (min-width: 768px) {
 
@@ -1043,20 +1058,7 @@ video {
 }
 
 
-
 /* waves */
-.inner-header {
-  height:65vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 .waves {
   position:relative;
   width: 100%;
@@ -1093,15 +1095,5 @@ video {
   }
   100% { 
     transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
   }
 }
