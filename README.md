@@ -10,6 +10,7 @@ and [Shipyard](https://shipyard.build) out of the box.
 - [Pug](https://github.com/pugjs/pug) - HTML template engine that integrates with Express
 - [Sequelize](https://github.com/sequelize/sequelize) - cross-database ORM and migrations
 - [PostgreSQL](https://www.postgresql.org/) - database
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
 
 ## Dependencies
 
