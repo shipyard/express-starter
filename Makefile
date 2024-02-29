@@ -6,6 +6,7 @@ clean:
 	docker compose rm -vf
 
 build:
+	npm run tailwind:css
 	docker compose build
 
 run:
